@@ -1,3 +1,4 @@
+require 'rspec/its'
 require 'warc'
 
 def fixture(path)

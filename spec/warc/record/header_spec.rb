@@ -1,6 +1,6 @@
 require 'spec_helper.rb'
 
-describe Warc::Record::Header do
+RSpec.describe Warc::Record::Header do
   context "when instansiated with some value" do
     before(:each) do
       @header=Warc::Record.new({
@@ -10,10 +10,11 @@ describe Warc::Record::Header do
         "Content-Length" => "10"
       }).header
     end
-    
+
     subject {@header}
 
     its(:type) { should eq "response"}
+
     it "should have attributes for mandatory fields" do
       @header.type.should eq "response"
       @header.record_id.should eq "<record-1>"
